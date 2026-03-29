@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+
+# 环境变量
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.claude/
+
+# 数据文件
+data/blogs.json
+data/blogs.db
+data/*.bak
+
+# 日志
+*.log
+nohup.out
+
+# 系统文件
+.DS_Store
+Thumbs.db

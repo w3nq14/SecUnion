@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客友链关系可视化</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>博客友链关系网络</h1>
+            <div class="controls">
+                <textarea id="seedUrls" placeholder="输入博客URL，每行一个" rows="3"></textarea>
+                <select id="maxDepth">
+                    <option value="1">深度: 1层</option>
+                    <option value="2">深度: 2层</option>
+                    <option value="3">深度: 3层</option>
+                    <option value="999">深度: 无限制</option>
+                </select>
+                <button id="startBtn">寻找友链</button>
+                <button id="stopBtn" style="display:none;">停止爬取</button>
+                <button id="cacheBtn">查看友链</button>
+                <button id="allBlogsBtn">全部友链</button>
+                <button id="updateFriendsBtn">更新友链</button>
+            </div>
+            <div id="status"></div>
+            <div id="tableView" style="display:none;">
+                <button id="switchToGraphBtn">切换到图形视图</button>
+                <table id="blogTable">
+                    <thead>
+                        <tr>
+                            <th>标题</th>
+                            <th>URL</th>
+                            <th>是否在线</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div id="blogList" style="display:none;"></div>
+        </div>
+        <div id="cy"></div>
+        <button id="switchToTableBtn" style="display:none;">切换到列表视图</button>
+    </div>
+    <script src="graph.js"></script>
+</body>
+</html>

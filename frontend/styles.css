@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #1a1a1a;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header {
+    background: #2c3e50;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+h1 {
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+#seedUrls {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    resize: vertical;
+    font-family: monospace;
+}
+
+#maxDepth {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+#startBtn, #stopBtn, #cacheBtn, #allBlogsBtn {
+    padding: 10px 30px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+#startBtn {
+    background: #3498db;
+}
+
+#stopBtn {
+    background: #e74c3c;
+}
+
+#cacheBtn {
+    background: #9b59b6;
+}
+
+#allBlogsBtn {
+    background: #16a085;
+}
+
+#startBtn:hover {
+    background: #2980b9;
+}
+
+#stopBtn:hover {
+    background: #c0392b;
+}
+
+#cacheBtn:hover {
+    background: #8e44ad;
+}
+
+#allBlogsBtn:hover {
+    background: #138d75;
+}
+
+#startBtn:disabled {
+    background: #7f8c8d;
+    cursor: not-allowed;
+}
+
+#blogList {
+    background: #2c3e50;
+    padding: 20px;
+    margin: 10px 20px;
+    border-radius: 8px;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+#blogList h3 {
+    margin-bottom: 15px;
+    color: #ecf0f1;
+}
+
+.all-blogs-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.all-blogs-table th {
+    background: #34495e;
+    padding: 12px;
+    text-align: left;
+    border-bottom: 2px solid #1a1a1a;
+    white-space: nowrap;
+}
+
+.all-blogs-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #34495e;
+}
+
+.all-blogs-table td:first-child {
+    word-wrap: break-word;
+    word-break: break-word;
+    max-width: 300px;
+}
+
+.all-blogs-table tr:hover {
+    background: #34495e;
+}
+
+.all-blogs-table a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.all-blogs-table a:hover {
+    text-decoration: underline;
+}
+
+.blacklist-btn {
+    padding: 5px 10px;
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.blacklist-btn:hover {
+    background: #c0392b;
+}
+
+#status {
+    color: #ecf0f1;
+    font-size: 14px;
+}
+
+#cy {
+    flex: 1;
+    background: #0d1117;
+}
+
+.legend {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(44, 62, 80, 0.9);
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid #fff;
+}
+
+.highlighted {
+    opacity: 1 !important;
+}
+
+node:not(.highlighted) {
+    opacity: 0.3;
+}
+
+edge:not(.highlighted) {
+    opacity: 0.3;
+}
+
+#tableView {
+    background: #2c3e50;
+    padding: 20px;
+    margin: 10px 20px;
+    border-radius: 8px;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+#switchToGraphBtn {
+    padding: 10px 20px;
+    background: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+#switchToGraphBtn:hover {
+    background: #2980b9;
+}
+
+#blogTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#blogTable th {
+    background: #34495e;
+    padding: 12px;
+    text-align: left;
+    border-bottom: 2px solid #1a1a1a;
+}
+
+#blogTable td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #34495e;
+}
+
+#blogTable tr:hover {
+    background: #34495e;
+}
+
+#blogTable a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+#blogTable a:hover {
+    text-decoration: underline;
+}
+
+#switchToTableBtn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#switchToTableBtn:hover {
+    background: #2980b9;
+}

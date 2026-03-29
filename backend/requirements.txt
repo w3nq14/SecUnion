@@ -1,0 +1,6 @@
+aiohttp==3.9.1
+beautifulsoup4==4.12.2
+fastapi==0.109.0
+uvicorn==0.27.0
+networkx==3.2.1
+requests==2.31.0
